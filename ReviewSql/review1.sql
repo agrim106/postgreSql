@@ -1,21 +1,28 @@
-Server [localhost]:
-Database [postgres]:
-Port [5432]:
-Username [postgres]:
-Password for user postgres:
+BEGIN
+ROLLBACK
+INSERT 0 1
+COMMIT
+BEGIN
+ROLLBACK
+BEGIN
+ROLLBACK
+BEGIN
+ROLLBACK
+BEGIN
+INSERT 0 1
+COMMIT
+ member_id |  name  |  address  | contact_number 
+-----------+--------+-----------+----------------
+         1 | Agrim  | HR        | 9896653922
+         2 | Aryan  | PB        | 7888465372
+         3 | Aalekh | CHD       | 8360196895
+         4 | Akshay | Mohali    | 9417976347
+         5 | Alok   | Pinjore   | 9138360059
+         6 | Aman   | Delhi     | 6589559712
+       111 | Apan   | NewDelhii | 5556667779
+(7 rows)
 
-psql (17.2)
-WARNING: Console code page (437) differs from Windows code page (1252)
-         8-bit characters might not work correctly. See psql reference
-         page "Notes for Windows users" for details.
-Type "help" for help.
-
-postgres=# \c library
-You are now connected to database "library" as user "postgres".
-library=# \dt
-          List of relations
- Schema |   Name   | Type  |  Owner
---------+----------+-------+----------
+--
  public | books    | table | postgres
  public | borrower | table | postgres
 (2 rows)
